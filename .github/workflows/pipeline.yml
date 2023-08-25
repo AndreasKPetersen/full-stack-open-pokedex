@@ -48,8 +48,8 @@ jobs:
         with:
           severity: info
           color: "#00ff00"
-          text: "A new version of Pokedex deployed"
-          details: "to https://pokedexafp.fly.dev/ by ${{ github.event.head_commit.author.username }}"
+          text: A new version of Pokedex deployed
+          details: to https://pokedexafp.fly.dev/ by ${{ github.event.head_commit.author.username }}
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
 
       - name: Test Failure
@@ -60,9 +60,9 @@ jobs:
         with:
           severity: error
           color: "#ff0000"
-          text: "Build failed"
-          description: "commit"
-          details: "https://github.com/${{ github.repository }}/commit/${{ env.COMMIT_SHA }} by ${{ github.event.head_commit.author.username }} broke the build"
+          text: Build failed
+          description: commit
+          details: https://github.com/${{ github.repository }}/commit/${{ env.COMMIT_SHA }} by ${{ github.event.head_commit.author.username }} broke the build
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
 
   tag_release:
