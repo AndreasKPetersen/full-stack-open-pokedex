@@ -62,7 +62,7 @@ jobs:
           color: "#ff0000"
           text: Build failed
           description: commit
-          details: https://github.com/${{ github.repository }}/commit/${{ env.COMMIT_SHA }} by ${{ github.event.head_commit.author.username }} broke the build
+          details: https://github.com/${{ github.repository }}/commit/${{ env.COMMIT_SHA }} by ${{ github.event.head_commit.author.username }} broke the app
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
 
   tag_release:
