@@ -1,9 +1,8 @@
 name: Schedule
 
 on:
-  push:
-    branches:
-      - master
+  schedule:
+    - cron: "30 1,3,23 * * *"
 
 jobs:
   test_schedule:
